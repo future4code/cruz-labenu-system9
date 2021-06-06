@@ -1,15 +1,15 @@
-import { Request, Response } from "express";
 import app from "./app";
-import { connection } from './connection'
+import createClass from "./endpoints/createClass";
+import createDocente from "./endpoints/createDocente";
+import createStudants from "./endpoints/createStudents";
+import studantsId from "./endpoints/studantsId";
 
 
-app.put("/turma",(req:Request,res:Response)=>{
-    try {
-        const{nome,data_inicio,data_final,modulo} = req.body;
+app.get('/estudante/:id', studantsId)
+app.put("/estudante", createStudants)
+app.post("/estudante", createStudants)
 
-        
+app.put("/turma", createClass)
 
-    } catch (error) {
-     res.status(400).send({message:error.message})   
-    }
-})
+app.put('/docente', createDocente)
+
