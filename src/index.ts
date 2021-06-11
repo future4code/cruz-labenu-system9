@@ -1,5 +1,4 @@
 import app from "./app";
 import getTurma from "./endpointData/getTurma";
 
-
-app.put("/turma",getTurma)
+app.put("/turma-labenu",getTurma)
