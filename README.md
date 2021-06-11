@@ -31,3 +31,55 @@ As funcionalidades básicas são:
 → Adicionar docente na turma;
 
 → Pegar a idade de algum estudante a partir do id
+
+// create table passatempo (
+// 	id int not null primary key auto_increment,
+//     nome varchar(255) not null
+// );
+
+// create table especialidade(
+// 	id int not null primary key auto_increment,
+//     nome varchar(255) not null
+// );
+
+// create table turma(
+// 	id int not null primary key auto_increment,
+//     nome varchar(255) not null,
+//     data_inicio date not null,
+//     data_final date not null,
+//     modulo int not null
+// );
+
+// create table docente(
+// 	id int not null primary key auto_increment,
+//     nome varchar(255) not null,
+//     email varchar(50) not null unique,
+//     data_nasc date not null,
+//     turma_id int not null,
+//     foreign key (turma_id) references turma(id)
+// );
+
+// create table estudante(
+// 	id int not null primary key auto_increment,
+//     nome varchar(255) not null,
+//     email varchar(50) not null unique,
+//     data_nasc date not null,
+//     turma_id int not null,
+//     foreign key (turma_id) references turma(id)
+// );
+
+// create table estudante_passamento(
+// 	estudante_id int not null,
+//     passatempo_id int not null,
+//     primary key(estudante_id,passatempo_id),
+//     foreign key (estudante_id) references estudante(id),
+//     foreign key (passatempo_id) references passatempo(id)
+// );
+
+// create table docente_especialidade(
+// 	docente_id int not null,
+//     especialidade_id int not null,
+//     primary key(docente_id,especialidade_id),
+//     foreign key (docente_id) references docente(id),
+//     foreign key (especialidade_id) references especialidade(id)
+// );
